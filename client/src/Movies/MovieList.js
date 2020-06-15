@@ -1,6 +1,12 @@
 import React from 'react';
+import { Link, useRouteMatch } from 'react-router-dom'
 
 const MovieList = props => {
+  const { url, path } = useRouteMatch()
+  console.log(props)
+  console.log('url from the hook', url)
+  console.log('path from the hook', path)
+
   return (
     <div className="movie-list">
       {props.movies.map(movie => (
